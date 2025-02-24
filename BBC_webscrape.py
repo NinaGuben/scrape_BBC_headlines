@@ -7,7 +7,7 @@ url = "https://www.bbc.com/news"
 response = requests.get(url)
 
 if response.status_code != 200:
-    print("Error: {response.status_code} - {response.text}")
+    print(f"Error: {response.status_code} - {response.text}")
 else:
     print("Website information accessible")
     soup = BeautifulSoup(response.text, "html.parser")
